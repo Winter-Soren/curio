@@ -6,10 +6,12 @@ import (
 	"strings"
 	"sync"
 
+	"golang.org/x/exp/maps"
+
+	"github.com/filecoin-project/go-address"
+
 	"github.com/filecoin-project/curio/deps/config"
 	"github.com/filecoin-project/curio/harmony/harmonydb"
-	"github.com/filecoin-project/go-address"
-	"golang.org/x/exp/maps"
 )
 
 var walletOnce sync.Once
