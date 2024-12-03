@@ -530,7 +530,7 @@ func (p *PDPService) handleAddRootToProofSet(w http.ResponseWriter, r *http.Requ
 	var proofSetService string
 	var proofSetListener string
 	err = p.db.QueryRow(ctx, `
-			SELECT service
+			SELECT service, proofset_listener
 			FROM pdp_proof_sets
 			WHERE id = $1
 		`, proofSetIDUint64).Scan(&proofSetService, &proofSetListener)
